@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="item" type="com.x0.gadget_tf.bindingsample10.RepositoryItem"/>
+    </data>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{item.full_name}"
+                android:textStyle="bold"
+                tools:text="タイトル"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@{`stargazers: ` + String.valueOf(item.stargazers_count)}"
+                android:layout_height="wrap_content"
+                tools:text="100"/>
+
+    </LinearLayout>
+</layout>
